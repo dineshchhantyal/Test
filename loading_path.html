@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path 2</title>
+    <style>
+        * {
+            background-origin: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: .4rem;
+            text-transform: uppercase;
+            scroll-behavior: smooth;
+        }
+
+        .loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 12;
+            background: darkcyan;
+            display: flex;
+            ;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loadericon {
+            background-color: white;
+            height: 20px;
+            width: 20px;
+            animation: fill .7s infinite;
+            transition: all 9s ease-in-out;
+        }
+
+        @keyframes fill {
+
+            0% {
+                clip-path: polygon(0 100%, 100% 100%, 99% 100%, 0% 100%);
+            }
+
+            50% {
+                clip-path: polygon(0 0, 100% 0%, 99% 100%, 0% 100%);
+            }
+
+            75% {
+                transform: rotateZ(45deg);
+            }
+
+            100% {
+                transform: rotateZ(90deg);
+            }
+
+        }
+
+        @keyframes loaderFadeOut {
+            0% {
+                clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            }
+
+            100% {
+                clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+            }
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(100%, 1fr);
+        }
+
+        .container1 {
+            background: burlywood;
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 50% 100%, 0% 50%);
+        }
+
+        .container2 {
+            background: rgb(255, 238, 0);
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            margin-top: -250px;
+
+
+        }
+
+        .container2 button {
+            width: 7rem;
+            height: 2.5rem;
+            padding: 7px;
+            color: white;
+            background-color: rgb(87, 218, 0);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0px 0px 6px 0px green;
+            border-radius: 6px;
+        }
+
+        .container2 button:hover {
+            box-shadow: 0px 0px 40px 1px green;
+            transition: all 0.4s ease;
+        }
+
+        .container3 {
+            background: rgb(54, 57, 255);
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+
+        }
+
+        .container4 {
+            background: url('https://source.unsplash.com/random/1920x1080');
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: -1;
+            clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+
+        }
+
+        .container5 {
+            background: rgb(255, 234, 207);
+            width: 100%;
+            height: 97vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .container6 {
+            background: rgb(255, 65, 74);
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loadericon">
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="container1">
+            Welcome To Our Website..
+        </div>
+        <div class="container2">
+            Donate Us:
+            <form ></form>
+            <button type="submit" action="C:\Users\myagd\Desktop\Project\test\animated_icons\clip_path_1.html">DONATE</button>
+            </form>
+        </div>
+        <div class="container3">
+            PROJECTS
+        </div>
+        <div class="container4">
+            IMAGES
+        </div>
+        <div class="container5">
+            VIDEOS & AUDIO
+        </div>
+        <div class="container6">
+            ABOUT
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            $('.loadericon').fadeOut();
+            $('.loader').css('animation', 'loaderFadeOut 0.4s forwards')
+            $('loader').fadeOut();
+        });
+    </script>
+</body>
+
+</html>

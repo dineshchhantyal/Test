@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Nav Icon Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            text-align: center;
+            height: 100vh;
+            width: 100%;
+            background: rgb(212, 212, 212);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .container {
+            align-content: center;
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        li>div {
+            display: flex;
+            flex-direction: column;
+            letter-spacing: .12rem;
+            font-size: 44px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .facebook-text,
+        .twitter-text,
+        .instagram-text,
+        .youtube-text {
+            color: white;
+            border-radius: 6px;
+            font-size: 24px;
+            text-align: center;
+            z-index: 2;
+            position: absolute;
+            visibility: hidden;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        }
+
+        .facebook-text {
+            background-color: rgb(6, 6, 141);
+        }
+
+        .twitter-text {
+            background-color: rgb(53, 141, 255);
+        }
+
+        .instagram-text {
+            background-color: rgb(255, 45, 45);
+        }
+
+        .youtube-text {
+            background-color: rgb(255, 0, 0);
+        }
+
+        i {
+            width: 50px;
+            height: 49px;
+            border-radius: 50px;
+            border: 1px solid white;
+            background-color: black;
+            cursor: pointer;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        }
+
+        i:hover {
+            background-color: white;
+        }
+
+        .fa-facebook:hover {
+            color: blue;
+            transition: color .5s ease-in-out;
+            box-shadow: 0px 8px 16px 0px rgba(5, 2, 179, 0.2);
+
+        }
+
+        .fa-twitter:hover {
+            color: rgb(53, 141, 255);
+            transition: color .5s ease-in-out;
+            box-shadow: 0px 8px 16px 0px rgba(0, 115, 182, 0.2);
+
+
+        }
+
+        .fa-instagram:hover {
+            transition: color .5s ease-in-out;
+            color: rgb(255, 45, 45);
+            box-shadow: 0px 8px 16px 0px rgba(255, 57, 90, 0.2);
+
+        }
+
+        .fa-youtube-play:hover {
+            transition: color .5s ease-in-out;
+            color: rgb(255, 0, 0);
+            box-shadow: 0px 8px 16px 1px rgba(255, 49, 49, 0.2);
+
+        }
+
+        li:nth-child(1) div:hover .facebook-text {
+
+            visibility: visible;
+            animation: scaleY .5s ease forwards;
+        }
+
+        @keyframes scaleY {
+            from {
+                opacity: 0.4;
+                margin-bottom: 100px;
+                transform: scaleX(.977);
+            }
+            to {
+                opacity: 1;
+                transform: scaleX(1);
+                margin-bottom: 120px;
+            }
+        }
+        li:nth-child(2) div:hover .twitter-text { 
+            visibility: visible;
+            animation: scaleY .5s ease forwards;
+
+        }
+
+        li:nth-child(3) div:hover .instagram-text {
+            visibility: visible;
+            animation: scaleY .5s ease forwards;
+
+        }
+
+        li:nth-child(4) div:hover .youtube-text {
+            visibility: visible;
+            animation: scaleY .5s ease forwards;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <div class="facebook">
+                    <span class="facebook-text"> Facebook </span>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </div>
+            </li>
+            <li>
+                <div class='twitter'>
+                    <span class="twitter-text">Twitter</span>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+            </li>
+            <li>
+                <div class='instagram'>
+                    <span class="instagram-text">Instagram</span>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </div>
+            </li>
+            <li>
+                <div class='youtube'>
+                    <span class="youtube-text">Youtube</span>
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
