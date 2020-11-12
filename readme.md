@@ -3,13 +3,14 @@
 - [x] this is a complete item
 - [ ] this is an incomplete item
 
+***
 
-
+~~this~~
 
 
 _You **can** combine them_
 
-
+***
 ## Hello Friend
 
 **My name is Dinesh**
