@@ -15,3 +15,11 @@
  * Subject
   * Math
   * Science
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
